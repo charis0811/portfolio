@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>登入</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="layout.css" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body>
+    <img id="indexPhoto" src="photo/index.jpg">
+
+    <div id="darkBack">
+        <input id="account" type="text" size="20" maxlength="20" placeholder="帳號"><br><br>
+        <input id="password" type="password" size="20" maxlength="20" placeholder="密碼"><br><br>
+        <input id="login" type="button" value="登入" onclick="login()">
+        <img id="gif" src="photo/animated-cat-image-0552.gif">
+
+    </div>
+           
+    <script>
+        function login() {
+            var accountMember = '11111';
+            var passMember = '11111';
+            var account = document.getElementById('account').value;
+            var password = document.getElementById('password').value;
+
+            if (account == accountMember && password == passMember){
+                window.open('memberPage.html');
+            }
+            else {
+                sweetAlert('登入錯誤');
+ 
+            }
+        }
+
+    </script>
+
+</body>
+</html>

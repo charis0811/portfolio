@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>正餐</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="layout.css" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body>
+    <script type="text/javascript" src="store_name.js"></script>
+    <script>
+        var storeName = storeName_List.split(",");//逗號區隔，return 陣列
+    </script>
+
+    <ul class="nav">
+        <div class="logoName">
+            大食怪記
+        </div>
+        <li><a href="#"><a href="工資特約.html">工資特約</a></a></li>
+        <li><a href="#"><a href="早午餐member.html">早午餐</a></a></li>
+        <li><a href="#"><a href="飲料店member.html">飲料店</a></a></li>
+        <li><a href="#"><a href="正餐member.html">正餐</a></a></li>
+    </ul>
+
+    <div>
+        <img class="banner" src="photo/ph49.jpg">
+    </div>
+
+    <br><br>
+    <input id="enterName" name="search" type="text" size="50" maxlength="20" placeholder="找尋美食！">
+    <input id="searchName" type="button" value="Search" onclick="searchStore()">
+    <br><br><br>
+
+    <div class="container">
+        <div class="card">
+            <a href="https://www.facebook.com/Curryawareness/?ref=page_internal">
+                <img id="sweet" src="photo/ph51.jpg">
+                <div class="info">
+                    <p>咖哩意識</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="card">
+            <a href="https://www.facebook.com/chengciansushi">
+                <img src="photo/ph52.jpg" alt="">
+                <div class="info">
+                    <p>城前料理亭</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="card">
+            <a href="https://www.facebook.com/doublecheese.tnn/">
+                <img src="photo/ph53.jpg" alt="">
+                <div class="info">
+                    <p>Double Cheese</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <a href="https://www.facebook.com/%E7%87%92%E7%A9%B6%E7%89%9B%E8%82%89%E9%A3%AF%E5%B0%88%E9%96%80%E5%BA%97-2284391881810231/">
+                <img src="photo/ph54.jpg" alt="">
+                <div class="info">
+                    <p>燒究牛肉飯</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="card">
+            <a href="https://www.facebook.com/together666">
+                <img src="photo/ph55.jpg" alt="">
+                <div class="info">
+                    <p>再一塊吧</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="card">
+            <a href="https://www.facebook.com/%E6%B5%B7%E5%AE%89%E8%B7%AF%E6%B1%95%E9%A0%AD%E6%84%8F%E9%BA%B5-917286741623637/">
+                <img src="photo/ph56.jpg" alt="">
+                <div class="info">
+                    <p>汕頭沙茶意麵</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+    <br><br><br>
+    <input id="lastPage" type="button" value="上一頁" onclick="window.history.back(-1);">
+    <br>
+    <input id="lastPage" type="button" value="首頁" onclick="location.href='memberPage.html'">
+    <br><br><br>
+
+    <div id="FOOTER">
+        <h3>大食怪陪你吃吃喝喝</h3>
+        <img id="gif" src="photo/animated-cat-image-0552.gif">
+    </div>
+    <script>
+        function searchStore() {
+            var result = document.getElementById('enterName').value;
+                switch (result) {
+                case '尋路甜':
+                    window.open('尋路甜member.html');
+                    break;
+                case 'Atem':
+                    window.open('Atemmember.html');
+                    break;
+                case '二子咖啡':
+                    window.open('二子咖啡member.html');
+                    break;
+                case '自己的房間':
+                    window.open('自己的房間member.html');
+                    break;
+                case '深作咖啡':
+                    window.open('深作咖啡member.html');
+                    break;
+                case '墨樂咖啡':
+                    window.open('墨樂咖啡member.html');
+                    break;
+            }
+        }
+    </script>
+
+</body>
+</html>

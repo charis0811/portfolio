@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>index</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="layout.css" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body>
+    <ul class="nav">
+        <div class="logoName">
+            大食怪記
+        </div>
+
+        <li><a href="#"><a href="早午餐.html">早午餐</a></a></li>
+        <li><a href="#"><a href="飲料店.html">飲料店</a></a></li>
+        <li><a href="#"><a href="正餐.html">正餐</a></a></li>
+        <li><a href="#"><a href="註冊.html">註冊</a></a></li>
+        <li><a href="#"><a href="登入.html">登入</a></a></li>
+
+    </ul>
+
+    <div>
+        <img class="banner" src="photo/ph7.jpg">
+    </div>
+
+    <br><br>
+    <input id="enterName" name="search" type="text" size="50" maxlength="20" placeholder="找尋美食！">
+    <input id="searchName" type="button" value="Search" onclick="searchStore()">
+    <br><br><br>
+
+    <div class="container">
+        <div class="card">
+            <a href="file:///C:/xampp/htdocs/first/%E5%B0%8B%E8%B7%AF%E7%94%9C.html">
+                <img id="sweet" src="photo/ph1.jpg">
+                <div class="info">
+                    <p>尋路甜</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="card">
+            <img src="photo/ph2.jpg" alt="">
+            <div class="info">
+                <p>墨樂咖啡</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="photo/ph3.jpg" alt="">
+            <div class="info">
+                <p>深作咖啡</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <img src="photo/ph4.jpg" alt="">
+            <div class="info">
+                <p>二子咖啡</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="photo/ph5.jpg" alt="">
+            <div class="info">
+                <p>自己的房間</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="photo/ph6.jpg" alt="">
+            <div class="info">
+                <p>Atem</p>
+            </div>
+        </div>
+    </div>
+
+
+   <br><br><br>
+    <div id="FOOTER">
+        <h3>大食怪陪你吃吃喝喝</h3>
+        <img id="gif" src="photo/animated-cat-image-0552.gif">
+    </div>
+
+    <script>
+        function searchStore() {
+            var result = document.getElementById('enterName').value;
+                switch (result) {
+                case '尋路甜':
+                    window.open('尋路甜.html');
+                    break;
+                case 'Atem':
+                    window.open('Atem.html');
+                    break;
+                case '二子咖啡':
+                    window.open('二子咖啡.html');
+                    break;
+                case '自己的房間':
+                    window.open('自己的房間.html');
+                    break;
+                case '深作咖啡':
+                    window.open('深作咖啡.html');
+                    break;
+                case '墨樂咖啡':
+                    window.open('墨樂咖啡.html');
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

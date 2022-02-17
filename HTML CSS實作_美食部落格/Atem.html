@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Atem</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="layout.css" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body>
+    <ul class="nav">
+        <div class="logoName">
+            Atem
+        </div>
+
+        <li><a href="#"><a href="早午餐.html">早午餐</a></a></li>
+        <li><a href="#"><a href="飲料店.html">飲料店</a></a></li>
+        <li><a href="#"><a href="正餐.html">正餐</a></a></li>
+    </ul>
+
+    <div>
+        <img class="banner" src="photo/ph12.jpg">
+    </div>
+    <br><br>
+    <input id="enterName" name="search" type="text" size="50" maxlength="20" placeholder="找尋美食！">
+    <input id="searchName" type="button" value="Search" onclick="searchStore()">
+
+    <br><br><br>
+    <table>
+        <tr>
+            <td>
+                <ul>
+                    <li>地址：台南市中西區民族路二段251號</li>
+                    <li>聯絡方式:<a href="tel:(06)200-7227">(06)200-7227</a></li>
+                </ul>
+                <div id="timeDiv"></div>
+                <br>
+            </td>
+            <td>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.75333117157!2d120.20217481412715!3d22.99609642308965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e77cb4cea2613%3A0xf4d4228a07d67dbd!2sATEM%20COFFEE!5e0!3m2!1szh-TW!2stw!4v1608341377162!5m2!1szh-TW!2stw"></iframe>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img id="big" src="photo/ph28.jpg">
+            </td>
+            <td>
+                <ul>
+                    <li>店內環境精緻，座位不多</li>
+                    <li>布蕾口感偏扎實，焦糖香氣十足，帶些苦韻味</li>
+                    <li>內有可愛店貓蚵仔煎</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+    <div id="small">
+        <img class="smallPhoto" src="photo/ph28.jpg">
+        <img class="smallPhoto" src="photo/ph29.jpg">
+        <img class="smallPhoto" src="photo/ph30.jpg">
+    </div>
+
+    <br><br><br>
+    <input id="lastPage" type="button" value="上一頁" onclick="window.history.back(-1);">
+    <br>
+    <input id="lastPage" type="button" value="首頁" onclick="location.href='index.html'">
+
+
+    <br><br><br>
+    <div id="FOOTER">
+        <h3>大食怪陪你吃吃喝喝</h3>
+        <img id="gif" src="photo/animated-cat-image-0552.gif">
+    </div>
+
+    <script>
+        var now = new Date();
+        var weekday = new Array(7);
+        weekday[0] = "Sunday";
+        weekday[1] = "Monday";
+        weekday[2] = "Tuesday";
+        weekday[3] = "Wednesday";
+        weekday[4] = "Thursday";
+        weekday[5] = "Friday";
+        weekday[6] = "Saturday";
+
+        var checkTime = function () {
+            var today = weekday[now.getDay()];
+            var timeDiv = document.getElementById('timeDiv');
+            var dayOfWeek = now.getDay();
+            var hour = now.getHours();
+            var minutes = now.getMinutes();
+
+
+            // add 0 to one digit minutes
+            if (minutes < 10) {
+                minutes = "0" + minutes
+            };
+
+            if ((dayOfWeek == 0 || dayOfWeek == 2 || dayOfWeek == 3 || dayOfWeek == 4||dayOfWeek == 6)&&(hour>=13&&hour<=23)) {
+                timeDiv.innerHTML = 'it\'s ' + today + ' ' + hour + ':' + minutes  + ' - we\'re open!';
+                timeDiv.className = 'open';
+            }
+
+            else {
+                timeDiv.innerHTML = 'It\'s ' + today + ' ' + hour + ':' + minutes  + ' - we\'re closed!';
+                timeDiv.className = 'closed';
+            }
+        };
+
+        var currentDay = weekday[now.getDay()];
+        var currentDayID = "#" + currentDay; //gets todays weekday and turns it into id
+        $(currentDayID).toggleClass("today"); //hightlights today in the view hours modal popup
+
+        setInterval(checkTime, 1000);
+        checkTime();
+    </script>
+
+    <script>
+        setInterval(play, 2000);
+        var index = 1;
+
+        function play() {
+            var imgs = document.getElementById('small').getElementsByClassName('smallPhoto');
+            var bigImg = document.getElementById('big');
+            index++;
+
+            if (index == imgs.length)
+                index = 0;
+
+            bigImg.setAttribute('src', imgs[index].getAttribute('src'));
+        }
+    </script>
+    <script>
+        function searchStore() {
+            var result = document.getElementById('enterName').value;
+                switch (result) {
+                case '尋路甜':
+                    window.open('尋路甜.html');
+                    break;
+                case 'Atem':
+                    window.open('Atem.html');
+                    break;
+                case '二子咖啡':
+                    window.open('二子咖啡.html');
+                    break;
+                case '自己的房間':
+                    window.open('自己的房間.html');
+                    break;
+                case '深作咖啡':
+                    window.open('深作咖啡.html');
+                    break;
+                case '墨樂咖啡':
+                    window.open('墨樂咖啡.html');
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
